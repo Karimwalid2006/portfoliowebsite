@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    min-height: 1000px;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    color: #fff;
+    z-index: 1000;
+    transition: 0.6s
+}
+header.sticky{
+    padding: 5px 100px;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    text-decoration: none;
+    margin: 0 15px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 300;
+    transition: 0.6s;
+}
+header.sticky ul li a,
+header.sticky .logo{
+    color: #000;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(bg.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner h2{
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    line-height: 1em;
+    font-size: 90px;
+}
+.banner h2 span{
+    color: #4978ff;
+}
+.sec{
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+}
+.sec .content{
+    position: relative;
+    text-align: center;
+    padding: 100px;
+    color: #000;
+}
+.mxw800px{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.sec .content h3{
+    margin-bottom: 10px;
+    font-weight: 200;
+    font-size: 40px;
+}
+p {
+    font-size: 15px;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+}
+.services {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.services .box{
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    padding: 25px;
+}
+.services .box .iconbx{
+    margin-top: 25px;
+}
+.services .box .iconbx img{
+    max-width: 70px;
+}
+.services .box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.stats {
+    background: #000;
+    padding-top: 250px;
+    margin-top: -250px;
+}
+.stats h3,
+.stats p{
+    color: #fff;
+}
+.statebox{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top: 20px;
+}
+.statebox h2{
+    color: #fff;
+    font-size: 32px;
+}
+.statebox h4{
+    color: #fff;
+    font-size: 16px;
+    margin-top: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.teambx{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.teambx .member{
+    position: relative;
+    background: #fff;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teambx .member .imgbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.teambx .member .imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.teambx .member .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: 0.2s;
+    opacity: 0;
+}
+.teambx .member:hover .details{
+    opacity: 1;
+}
+.teambx .member .details h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.teambx .member .details h2 span{
+    font-size: 12px;
+    display: block;
+    font-weight: 300;
+    color: #4978ff;
+}
+.toggle{
+    display: none;
+}
+@media (max-width: 992px){
+    .toggle{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .toggle:before{
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        box-shadow: 0 10px 0 #000;
+        transition: 0.5s;
+    }
+    .toggle:after{
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    header ul{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 50px;
+        overflow: auto;
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+    }
+    header.active ul{
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+    header.active ul li a{
+        display: inline-block;
+        margin: 10px 0;
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    header{
+        padding: 5px 50px;
+        background: #fff;
+    }
+    header .logo,
+    header ul li a{
+        color: #000;
+    }
+    .banner{
+        background-position: center;
+    }
+    .banner h2{
+        padding: 0 50px;
+        font-size: 60px;
+    }
+    .sec{
+        padding: 100px 50px 50px 50px;
+    }
+}
